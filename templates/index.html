@@ -1,0 +1,246 @@
+<div>
+    {% include "header.html" %}
+    </script>
+
+</div>
+
+<!--Slider Area Start-->
+<form action="/">
+
+                <div class="slider">
+                    <div class="preview-2">
+                        <div id="nivoslider" class="slides">
+                            <img src="static/img/slider/1.jpg" alt="" title="#slider-1-caption1"/>
+<!--                            <img src="static/img/slider/2.jpg" alt="" title="#slider-1-caption2"/>-->
+                        </div>
+                        <div id="slider-1-caption1" class="nivo-html-caption nivo-caption">
+                            <div class="banner-content slider-1">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="text-content-wrapper">
+                                                <div class="text-content">
+                                                    <h1 class="title1 wow fadeInUp" data-wow-duration="2000ms" data-wow-delay="0s">Education Needs<br>
+                                                    Complete Solution</h1>
+                                                    <p class="sub-title wow fadeInUp hidden-sm hidden-xs" data-wow-duration="2900ms" data-wow-delay=".5s"> There are many variations of passages of Lorem Ipsum available, but the majority have<br>
+                                                    suffered alteration in some form, by injected humour, or randomised words which<br>
+                                                    don't look even slightly believable.</p>
+                                                    <div class="banner-readmore wow fadeInUp" data-wow-duration="3600ms" data-wow-delay=".6s">
+                                                        <a class="button-default" href="#">View Courses</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+<!--&lt;!&ndash;                        <div id="slider-1-caption2" class="nivo-html-caption nivo-caption">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div class="banner-content slider-2">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="container">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <div class="col-md-12">&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <div class="text-content-wrapper">&ndash;&gt;-->
+<!--&lt;!&ndash;                                                <div class="text-content slide-2">&ndash;&gt;-->
+<!--&lt;!&ndash;                                                    <h1 class="title1 wow rotateInDownLeft" data-wow-duration="1000ms" data-wow-delay="0s">Education Needs<br>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                    Complete Solution</h1>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                    <p class="sub-title wow rotateInDownLeft hidden-sm hidden-xs" data-wow-duration="1800ms" data-wow-delay="0s"> There are many variations of passages of Lorem Ipsum available, but the majority have<br>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                    suffered alteration in some form, by injected humour, or randomised words which<br>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                    don't look even slightly believable.</p>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                    <div class="banner-readmore wow rotateInDownLeft" data-wow-duration="1800ms" data-wow-delay="0s">&ndash;&gt;-->
+<!--&lt;!&ndash;                                                        <a class="button-default" href="#">View Courses</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--                    </div>-->
+<!--                </div>-->
+                <!--End of Slider Area-->
+                <!--About Area Start-->
+                <div class="about-area">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="about-container">
+                                    <h3>Parshwa Education </h3>
+                                    <p>Parshwa Education is a complete learning solution for a varied segment of learners.
+
+Learn and upskill your knowledge from the wide range of Courses offered
+Prepare, test and analyse your knowledge through the Assessments
+Share your ideas and learn from others by being a part of the Communities
+</p>
+                                    <a class="button-default" href="/about">Learn Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of About Area-->
+                <!--Course Area Start-->
+                <div class="course-area section-padding bg-white">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="section-title-wrapper">
+                                    <div class="section-title">
+                                        <h3>POPULAR COURSES</h3>
+                                        <p>There are many variations of Courses We Offered.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                        {% for row in db %}
+                            <div class="col-md-4 col-sm-6" style="padding-block-start: 52px;">
+
+                                <div class="single-item">
+                                    <div class="single-item-image overlay-effect">
+                                        <a href="#"><img src="static/img/course/{{row[1]}}" alt=""></a>
+                                    </div>
+                                    <div class="single-item-text">
+                                        <h4><a href="#">{{row[2]}}</a></h4>
+                                        <div class="single-item-text-info">
+                                            <span>By: <span>{{row[3]}}</span></span><br>
+                                            <span>Duration: <span>{{row[4]}}</span></span><br>
+                                            <span>Price: <span>{{row[5]}}</span></span><br>
+                                        <span>Information: <span>{{row[6]}}</span> </span>
+                                        </div>
+                                        <div class="single-item-content">
+<!--                                           <div class="single-item-comment-view">-->
+<!--                                               <span><i class="zmdi zmdi-eye"></i>59</span>-->
+<!--                                               <span><i class="zmdi zmdi-comments"></i>19</span>-->
+<!--                                           </div>-->
+<!--                                           <div class="single-item-rating">-->
+<!--                                               <i class="zmdi zmdi-star"></i>-->
+<!--                                               <i class="zmdi zmdi-star"></i>-->
+<!--                                               <i class="zmdi zmdi-star"></i>-->
+<!--                                               <i class="zmdi zmdi-star"></i>-->
+<!--                                               <i class="zmdi zmdi-star-half"></i>-->
+<!--                                           </div>-->
+                                        </div>
+                                    </div>
+
+                                    <div class="button-bottom">
+<!--                                        <a href="#" class="button-default">Learn Now</a>-->
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+
+                            <div class="col-md-12 col-sm-12 text-center">
+                                <a href="/course" class="button-default button-large">Browse All Courses </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!--End of Course Area-->
+                <!--Fun Factor Area Start-->
+                <div class="fun-factor-area">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="section-title-wrapper white">
+                                    <div class="section-title">
+                                        <h3>IMPORTANT FACTS</h3>
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 col-sm-3">
+                                <div class="single-fun-factor">
+                                    <h4>Teachers</h4>
+                                    <h2><span class="counter">
+                                     {% for row in db2 %}
+                                        {{row.0}}
+                                      {% endfor %}
+                                    </span>+</h2>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-3">
+                                <div class="single-fun-factor">
+                                    <h4>Students</h4>
+                                    <h2><span class="counter">
+                                    {% for row in db3 %}
+                                        {{row.0}}
+                                      {% endfor %}
+</span>+</h2>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-3">
+                                <div class="single-fun-factor">
+                                    <h4>Courses</h4>
+                                    <h2><span class="counter">
+                                    {% for row in db4 %}
+                                        {{row.0}}
+                                      {% endfor %}
+</span>+</h2>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-3">
+                                <div class="single-fun-factor">
+                                    <h4>Testimonial</h4>
+                                    <h2><span class="counter">
+                                    {% for row in db5 %}
+                                        {{row.0}}
+                                      {% endfor %}
+                                       </span>+</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of Fun Factor Area-->
+                <!--Latest News Area Start-->
+                <div class="latest-area section-padding bg-white">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="section-title-wrapper">
+                                    <div class="section-title">
+                                        <h3>Testimonials</h3>
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                             {% for roww in db1 %}
+                            <div class="col-md-6">
+                                <div class="single-latest-item">
+                                    <div class="single-latest-image">
+                                        <a href="#"><img src="static/img/latest/{{roww[1]}}" alt=""></a>
+                                    </div>
+                                    <div class="single-latest-text">
+                                        <h3><a href="#">{{roww[2]}}</a></h3>
+                                        <div class="single-item-comment-view">
+                                           <span>{{roww[3]}}</span>
+<!--                                           <span><i class="zmdi zmdic-eye"></i>59</span>-->
+<!--                                           <span><i class="zmdi zmdi-comments"></i>19</span>-->
+                                       </div>
+                                       <p>{{roww[4]}} </p>
+<!--                                       <a href="#" class="button-defacult">LEARN NOW</a>-->
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                </div>
+</form>
+                <!--End of Latest News Area-->
+
+</div>
+<div>
+  {% include "footer.html" %}
+</div>
+</body>
+</html>

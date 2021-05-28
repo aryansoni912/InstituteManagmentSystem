@@ -1,0 +1,105 @@
+{%  include "admin/header.html" %}
+
+{%  include "admin/sidebar.html" %}
+
+<div class="ks-column ks-page">
+    <div class="ks-page-header">
+        <section class="ks-title">
+            <!--<hs3>Tabs</h3>-->
+        </section>
+    </div>
+    <div class="ks-page-content">
+        <div class="ks-page-content-body ks-tabs-page-container">
+            <div class="ks-tabs-container-description">
+
+            </div>
+            <div class="ks-page-content">
+                <div class="ks-page-content-body">
+                    <div class="ks-nav-body-wrapper">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-10 ks-panels-column-section">
+                                    <div class="card">
+                                        <div class="card-block">
+                                            <h5 class="card-title"></h5>
+                                            <form action="/teacher_update" method="post">
+                                                {% for row in db %}
+                                                <h3>
+                                                    <center> Teacher Update</center>
+                                                </h3>
+                                                <!--                                                <div class="col-sm-10">-->
+                                                <input type="text" class="form-control" id="No"
+                                                       placeholder="Add Category" name="No" value="{{row.0}}" hidden>
+                                                <!--                                                    </div>-->
+                                                <div class="form-group row">
+                                                    <label for="default-input"
+                                                           class="col-sm-2 form-control-label">Image</label>
+                                                    <div class="col-sm-10"><img
+                                                            src="{{url_for('static', filename='/img/teacher/')}}{{row.1}}"
+                                                            style="height:100px;width:100px;"></div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="default-input"
+                                                           class="col-sm-2 form-control-label">Name</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" id="Course_Name"
+                                                               placeholder="Add Teacher Name" name="Name"
+                                                               value="{{row.2}}">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for=" default-input" class="col-sm-2
+                                                    form-control-label">Information</label>
+                                                    <div class="col-sm-10">
+                                                        <select class="form-control" name="info">
+                                                            <option>{{row.3}}</option>
+                                                            {% for row in db5 %}
+                                                            <option>{{row[2]}}</option>
+                                                            {% endfor %}
+                                                        </select>
+                                                        <!--<div class="col-sm-10">-->
+                                                        <!--<input type="text" class="form-control" id="info"-->
+                                                        <!--placeholder="Add Teacher Information" name="info"-->
+                                                        <!--value="{{row.3}}">-->
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for=" default-input" class="col-sm-2
+                                                    form-control-label">Password</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" id="Password"
+                                                               placeholder="Password" name="password"
+                                                               value="{{row.4}}">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for=" default-input" class="col-sm-2
+                                                    form-control-label">Status</label>
+                                                    <div class="col-sm-10">
+                                                        Active &nbsp;&nbsp;&nbsp;<input type="radio"
+                                                                                        placeholder="Password"
+                                                                                        name="status"
+                                                                                        value="Active" checked> &nbsp;&nbsp;&nbsp;
+                                                        In Active &nbsp;&nbsp;&nbsp;<input type="radio"
+                                                                                           placeholder="Password"
+                                                                                           name="status"
+                                                                                           value="InActive">
+                                                    </div>
+                                                </div>
+                                                <center>
+                                                    <button type="submit" class="btn btn-primary">Update
+                                                    </button>
+                                                </center>
+                                                {% endfor %}
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

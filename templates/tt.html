@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Parshwa Education</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+
+    <!-- favicon
+    ============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+
+    <!-- Google Fonts
+    ============================================ -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800' rel='stylesheet'
+          type='text/css'>
+
+    <!-- Bootstrap CSS
+    ============================================ -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
+
+    <!-- Fontawsome CSS
+    ============================================ -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css')}}">
+
+    <!-- Owl Carousel CSS
+    ============================================ -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/owl.carousel.css')}}">
+
+    <!-- jquery-ui CSS
+    ============================================ -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/jquery-ui.css')}}">
+
+    <!-- Meanmenu CSS
+    ============================================ -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/meanmenu.min.css')}}">
+
+    <!-- Animate CSS
+    ============================================ -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/animate.css')}}">
+
+    <!-- Animated Headlines CSS
+    ============================================ -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/animated-headlines.css')}}">
+
+    <!-- Nivo slider CSS
+            ============================================ -->
+    <link rel="stylesheet" href="{{url_for('static', filename='lib/nivo-slider/css/nivo-slider.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{url_for('static', filename='lib/nivo-slider/css/preview.css')}}" type="text/css"
+          media="screen"/>
+
+    <!-- Metarial Iconic Font CSS
+    ============================================ -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/material-design-iconic-font.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/material-design-iconic-font.min.css')}}">
+
+    <!-- Slick CSS
+    ============================================ -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/slick.css')}}">
+    <!-- Video CSS
+    ============================================ -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/jquery.mb.YTPlayer.css')}}">
+
+    <!-- Style CSS
+    ============================================ -->
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+
+    <!-- Color CSS
+    ============================================ -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/color.css')}}">
+
+    <!-- Responsive CSS
+    ============================================ -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css')}}">
+
+    <!-- Modernizr JS
+    ============================================ -->
+    <script src="{{url_for('static', filename='js/vendor/modernizr-2.8.3.min.js')}}"></script>
+
+
+    <!-- Gallary css
+    ============================================ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+
+</head>
+<body>
+<div class="as-mainwrapper">
+    <!--Bg White Start-->
+    <div class="bg-white">
+        <!--Header Area Start-->
+        <header>
+            <div class="header-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-6 col-sm-5 hidden-xs">
+                            <span>Have any question? + 987561230</span>
+                        </div>
+
+
+                        <!--                        <div class="col-lg-3 col-md-6 col-sm-7 col-xs-12">-->
+                        <!--                            &lt;!&ndash;                                                       <button onclick="document.getElementById('id01').style.display='block'">Sign Up</button>&ndash;&gt;-->
+                        <!--                            <button onclick="document.getElementById('id02').style.display='block'">Sign In</button>-->
+                        <!--                        </div>-->
+
+                        <div class="col-lg-7 col-md-6 col-sm-7 col-xs-12">
+                            <button type="button"><a href="/signout_verify" style="color:white">Sign Out</a></button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Mobile Menu Area start -->
+                        <div class="header-logo-menu sticker">
+                <div class="container" style="padding:0px;">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            <div class="logo">
+                                <!--<a href="index.html"><img src="static/img/logo/logo.png" alt="Parshwa Education"></a>-->
+                                <h1>Parshwa Education</h1>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mainmenu-area pull-right">
+                                <div class="mainmenu hidden-sm hidden-xs">
+                                    <nav>
+                                        <ul id="nav">
+                                            <li class="current"><a href="/">Home</a></li>
+                                            <li><a href="/about">About</a></li>
+                                            <li><a href="/course">Courses</a></li>
+                                            <li><a href="/contact">Contact</a></li>
+                                            <li><a href="/password_update">Change Password </a></li>
+
+
+                                            <!--<li><a href="/login">login</a></li>-->
+                                        </ul>
+                                    </nav>
+                                    <!--<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>-->
+
+                                </div>
+
+                                <!--Search Form-->
+
+                                <!--End of Search Form-->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Menu Area start -->
+            <div class="mobile-menu-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="mobile-menu">
+                                <nav id="dropdown">
+                                    <ul>
+                                        <li><a href="/">HOME</a>
+                                        </li>
+                                        <li><a href="/about">About Us</a></li>
+                                        <li><a href="/courses">Courses</a>
+                                        </li>
+                                        <li><a href="/contact">Contact us</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Area end -->
+        </header>
+        <!--End of Header Area-->
+
+        <!DOCTYPE html>
+        <html>
+        <style>
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 85%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 40%;
+  opacity: 0.9;
+  float:right;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 20%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modal1 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+<!--  overflow: auto; /* Enable scroll if needed */-->
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+/* Modal1 Content/Box */
+.modal1-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 20%;
+  }
+}
+
+
+        </style>
+        <body>
+
+        <div id="id02" class="modal1">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal1">&times;</span>
+            <form class="modal1-content" action="/login_info" method="POST">
+                <div class="container">
+                    <h3>Sign In</h3>
+                    <br>
+                    <!--      <hr>-->
+                    <label><b>Email</b></label>
+                    <br>
+                    <input type="text" placeholder="Enter Email" name="Name" required>
+                    <br>
+                    <label><b>Password</b></label><br>
+                    <input type="password" placeholder="Enter Password" name="password" required>
+
+                    <div class="clearfix">
+                        <button type="button" onclick="document.getElementById('id02').style.display='none'"
+                                class="cancelbtn">Cancel
+                        </button>
+
+                        <button type="submit" class="signupbtn">Sign In</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <script>
+// Get the modal1
+var modal1 = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal1, close it
+window.onclick = function(event) {
+  if (event.target == modal1) {
+    modal1.style.display = "none";
+  }
+}
+
+
+        </script>
+
+        </body>
+        </html>
+
+
+        <!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFr5PKEUaw45PLBusmppl8z9tgk6bL1PA&callback=initMap"></script>-->
+        <!--<script type="text/javascript" src="https://www.google.com/jsapi"></script>-->
+        <!--<script>-->
+        <!--function initialize() {-->
+        <!--var mapOptions = {-->
+        <!--zoom: 15,-->
+        <!--scrollwheel: false,-->
+        <!--center: new google.maps.LatLng(23.0051431, 72.6178231)-->
+        <!--};-->
+
+        <!--var map = new google.maps.Map(document.getElementById('googleMap'),-->
+        <!--mapOptions);-->
+
+
+        <!--var marker = new google.maps.Marker({-->
+        <!--position: map.getCenter(),-->
+        <!--animation: google.maps.Animation.BOUNCE,-->
+        <!--icon: 'img/map-marker.png',-->
+        <!--map: map-->
+        <!--});-->
+
+        <!--}-->
+
+        <!--google.maps.event.addDomListener(window, 'load', initialize);-->
+        <!--</script>-->
+
+        <!-- jquery
+        ============================================ -->
+        <script src="{{url_for('static', filename='js/vendor/jquery-1.12.4.min.js')}}"></script>
+
+        <!-- bootstrap JS
+        ============================================ -->
+        <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+
+        <!-- nivo slider js
+                ============================================ -->
+        <script src="static/lib/nivo-slider/js/jquery.nivo.slider.js" type="text/javascript"></script>
+        <script src="static/lib/nivo-slider/home.js" type="text/javascript"></script>
+
+        <!-- meanmenu JS
+        ============================================ -->
+        <script src="{{url_for('static', filename='js/jquery.meanmenu.js')}}"></script>
+
+        <!-- wow JS
+        ============================================ -->
+        <script src="{{url_for('static', filename='js/wow.min.js')}}"></script>
+
+        <!-- owl.carousel JS
+        ============================================ -->
+        <script src="{{url_for('static', filename='js/owl.carousel.min.js')}}"></script>
+
+        <!-- scrollUp JS
+        ============================================ -->
+        <script src="{{url_for('static', filename='js/jquery.scrollUp.min.js')}}"></script>
+
+        <!-- Waypoints JS
+        ============================================ -->
+        <script src="{{url_for('static', filename='js/waypoints.min.js')}}"></script>
+
+        <!-- Counterup JS
+        ============================================ -->
+        <script src="{{url_for('static', filename='js/jquery.counterup.min.js')}}"></script>
+
+        <!-- Slick JS
+        ============================================ -->
+        <script src="{{url_for('static', filename='js/slick.min.js')}}"></script>
+
+        <!-- Animated Headlines JS
+        ============================================ -->
+        <script src="{{url_for('static', filename='js/animated-headlines.js')}}"></script>
+
+        <!-- Textilate JS
+        ============================================ -->
+        <script src="{{url_for('static', filename='js/textilate.js')}}"></script>
+
+        <!-- Lettering JS
+        ============================================ -->
+        <script src="{{url_for('static', filename='js/lettering.js')}}"></script>
+
+        <!-- Video Player JS
+        ============================================ -->
+        <script src="{{url_for('static', filename='js/jquery.mb.YTPlayer.js')}}"></script>
+
+        <!-- AJax Mail JS
+        ============================================ -->
+        <script src="{{url_for('static', filename='js/ajax-mail.js')}}"></script>
+
+        <!-- plugins JS
+        ============================================ -->
+        <script src="{{url_for('static', filename='js/plugins.js')}}"></script>
+
+
+        <!-- main JS
+        ============================================ -->
+        <script src="{{url_for('static', filename='js/main.js')}}"></script>
+
+    </div>
+</div>
+</body>
+</html>
+<!--Slider Area Start-->
+
+<div class="slider">
+    <div class="preview-2">
+        <div id="nivoslider" class="slides">
+            <img src="static/img/slider/2.jpg" alt="" title="#slider-1-caption1" style="height:250px;width:100%;"/>
+            <!--<img src="static/img/slider/2.jpg" alt="" title="#slider-1-caption2"/>-->
+        </div>
+        {% for row in db %}
+        <font style="FONT-SIZE: 37px;FONT-FAMILY: fantasy;TEXT-TRANSFORM: capitalize;">&nbsp; name:&nbsp;</font><font
+            style="
+             FONT-SIZE: 37px;FONT-FAMILY: fantasy;TEXT-TRANSFORM:capitalize;">{{row[3]}} {{row[6]}}</font>
+
+        <!--<form action="/tt">-->{% endfor %}
+        <center>
+            <h1>TIMETABLE</h1>
+
+        </center>
+        <!--<table border="1">-->
+        <!--<tr>-->
+        <!--<td>lec_no</td>-->
+        <!--<td>time</td>-->
+        <!--<td>subject</td>-->
+        <!--<td>day</td>-->
+        <!--</tr>-->
+        <!--{% for row in db2 %}-->
+        <!--<tr>-->
+        <!--<td>{{row.1}}</td>-->
+        <!--<td>{{row.2}}</td>-->
+        <!--<td>{{row.3}}</td>-->
+        <!--<td>{{row.4}}</td>-->
+        <!--</tr>-->
+        <!--{% endfor %}-->
+        <!--</table>-->
+
+        <div class="row" style="margin-left:300px;margin-bottom:20px;">
+            <div class="course-duration col-md-9">
+                <div class="duration-title">
+                    <div class="text"><span>Lecture No</span><span>Time</span><span>Subject</span> <span>Day </span></div>
+                </div>
+                <div class="duration-text">
+                    {% for row in db2 %}
+                    <div class="text"><span>{{row.1}}</span> <span>{{row.2}}</span>
+                        <span>{{row.3}}</span> <span>{{row.4}}</span></div>
+                    <!--<div class="text"><span>web design</span> <span class="text-right">10 days</span></div>-->
+                    <!--<div class="text"><span>apps design</span> <span class="text-right">16 days</span></div>-->
+                    <!--<div class="text"><span>web design</span> <span class="text-right">20 days</span></div>-->
+                    <!--<div class="text"><span>web design</span> <span class="text-right">22 days</span></div>-->
+                    {% endfor %}
+                </div>
+
+            </div>
+        </div>
+
+        <!--</form>-->
+        <!--                        course detail-->
+
+
+        <div class="course-area section-padding bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title-wrapper">
+                            <div class="section-title">
+                                <h3>YOUR COURSES</h3>
+                                <p>There are many variations of Courses We Offered.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    {% for roww in db4 %}
+                    <div class="col-md-4 col-sm-6" style="padding-block-start: 52px;">
+
+                        <div class="single-item">
+                            <div class="single-item-image overlay-effect">
+                                <a href="#"><img src="static/img/course/{{roww[2]}}" alt=""></a>
+                            </div>
+                            <div class="single-item-text">
+                                <h4><a href="#">{{roww[1]}}</a></h4>
+                                <div class="single-item-text-info">
+                                    <span>By: <span>{{roww[7]}}</span></span><br>
+                                    <span>Duration: <span>{{roww[4]}}</span></span><br>
+                                    <span>Price: <span>{{roww[5]}}</span></span><br>
+                                    <span>Information:<span> {{roww[6]}}</span></span>
+                                </div>
+                                <div class="single-item-content">
+                                    <!--                                           <div class="single-item-comment-view">-->
+                                    <!--                                               <span><i class="zmdi zmdi-eye"></i>59</span>-->
+                                    <!--                                               <span><i class="zmdi zmdi-comments"></i>19</span>-->
+                                    <!--                                           </div>-->
+<!--                                    <div class="single-item-rating">-->
+<!--                                        <i class="zmdi zmdi-star"></i>-->
+<!--                                        <i class="zmdi zmdi-star"></i>-->
+<!--                                        <i class="zmdi zmdi-star"></i>-->
+<!--                                        <i class="zmdi zmdi-star"></i>-->
+<!--                                        <i class="zmdi zmdi-star-half"></i>-->
+<!--                                    </div>-->
+                                </div>
+                            </div>
+
+                            <div class="button-bottom">
+                                <!--                                        <a href="#" class="button-default">Learn Now</a>-->
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                    <div class="col-md-12 col-sm-12 text-center">
+                        <!--                                <a href="#" class="button-default button-large">Browse All Courses <i class="zmdi zmdi-chevron-right"></i></a>-->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--                &lt;!&ndash;End of Latest News Area&ndash;&gt;-->
+
+    <!--</div>-->
+    <!--<div>-->
+    {% include "footer.html" %}
+</div>
+</body>
+</html>

@@ -1,0 +1,300 @@
+{%  include "admin/header.html" %}
+
+{%  include "admin/sidebar.html" %}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"
+        type="text/javascript"></script>
+<link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css"
+      rel="Stylesheet" type="text/css"/>
+<script type="text/javascript">
+<!--    $(function () {-->
+<!--        $("#date").date({-->
+<!--            changeMonth: true,-->
+<!--            changeYear: true,-->
+<!--            showOn: 'button',-->
+<!--            buttonImageOnly: true,-->
+<!--            buttonImage: '{{url_for('static', filename='date.jpg')}}',-->
+<!--            dateFormat: 'dd/mm/yy',-->
+<!--            yearRange: '1900:+0',-->
+<!--            onSelect: function (dateString, date) {-->
+<!--                ValidateDOB(dateString);-->
+<!--            }-->
+<!--        });-->
+<!--    });-->
+<!--    function ValidateDOB(dateString) {-->
+<!--        var lblError = $("#lblError");-->
+<!--        var parts = dateString.split("/");-->
+<!--        var dtDOB = new Date(parts[1] + "/" + parts[0] + "/" + parts[2]);-->
+<!--        var dtCurrent = new Date();-->
+<!--        lblError.html("Eligibility 18 years ONLY.")-->
+<!--        if (dtCurrent.getFullYear() - dtDOB.getFullYear() < 8) {-->
+<!--            return false;-->
+<!--        }-->
+
+<!--        if (dtCurrent.getFullYear() - dtDOB.getFullYear() == 8) {-->
+
+<!--            //CD: 11/06/2018 and DB: 15/07/2000. Will turned 18 on 15/07/2018.-->
+<!--            if (dtCurrent.getMonth() < dtDOB.getMonth()) {-->
+<!--                return false;-->
+<!--            }-->
+<!--            if (dtCurrent.getMonth() == dtDOB.getMonth()) {-->
+<!--                //CD: 11/06/2018 and DB: 15/06/2000. Will turned 18 on 15/06/2018.-->
+<!--                if (dtCurrent.getDate() < dtDOB.getDate()) {-->
+<!--                    return false;-->
+<!--                }-->
+<!--            }-->
+<!--        }-->
+<!--        lblError.html("");-->
+<!--        return true;-->
+<!--    }-->
+
+
+
+
+
+
+
+
+</script>
+<!--<div class="ks-page">-->
+<!--<div class="ks-page-header">-->
+<!--<a href="#" class="ks-logo">Parshwa Education</a>-->
+<!--</div>-->
+<!--<div class="ks-page-content">-->
+<!--<div style="margin-top: 40px;"><h2>Deadstock Managment System </h2></div>-->
+
+<div class="card panel panel-default ks-light ks-panel ks-signup" style="margin-left:250px;margin-top:100px;">
+    <div class="card-block">
+        <form class="form-container" name="fregister" action="/insert" method="post"
+              onsubmit="return ValidateDOB()" enctype="multipart/form-data">
+            <h3 class="ks-header">
+                <center>Sign Up</center>
+            </h3>
+            <div class="form-group row" style="height: 25px;">
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <input type="text" class="form-control" placeholder="First name" name="FName"
+                           id="InputFName" required>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <input type="text" class="form-control" placeholder="Middle name" name="MName"
+                           id="InputMName" required>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <input type="text" class="form-control" placeholder="Last name" name="LName" id="InputLName"
+                           required>
+                </div>
+            </div>
+            <div class="form-group" style="height: 25px;">
+                <div class="input-icon icon-left icon-lg icon-color-primary">
+                    <input type="text" maxlength="10" class="form-control" placeholder="Phone" name="txtNo" required>
+                    <label class="error" for="txtNo" id="mobileno_error" style="display: none"> Enter valid
+                        Mobile Number</label>
+                    <span class="icon-addon">
+                                        <span class="la la-phone"></span>
+                                    </span>
+                </div>
+            </div>
+            <div class="form-group" style="height: 25px;">
+                <div class="input-icon icon-left icon-lg icon-color-primary">
+                    <input type="email" class="form-control" placeholder="Email" name="Email" id="InputEmail"
+                           aria-describedby="emailHelp" data-validation="email" required>
+                    <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    <label class="error" for="InputEmail" id="email_error" style="display: none">E-mail is
+                        required.</label>
+                    <span class="icon-addon">
+                                        <span class="la la-at"></span>
+                                    </span>
+                </div>
+            </div>
+            <div class="form-group" style="height: 25px;">
+                <div class="input-icon icon-left icon-lg icon-color-primary">
+                    <input type="password" class="form-control" placeholder="Password" name="Password"
+                           id="txtPassword" data-validation="strength"
+                           data-validation-strength="2" required>
+                    <span class="icon-addon">
+                                        <span class="la la-key"></span>
+                                    </span>
+                    <label class="error" for="txtPassword" id="password_error" style="display: none">Password is
+                        required.</label>
+                </div>
+            </div>
+            <div class="form-group row" style="height: 5px;">
+                <label class="col-sm-2 form-control-label p-t-0">Gender</label>
+                <div class="col-sm-10">
+                    <label class="custom-control custom-radio">
+                        <input id="radio1" type="radio" class="custom-control-input" name="optradio" value="F">
+                        <span class="custom-control-indicator"></span>
+                        <span class="custom-control-description">Female</span>
+                    </label>
+                    <label class="custom-control custom-radio">
+                        <input id="radio1" type="radio" class="custom-control-input" name="optradio" value="M">
+                        <span class="custom-control-indicator"></span>
+                        <span class="custom-control-description">Male</span>
+                    </label>
+                    <label class="error" for="optradio" id="gender_error" style="display: none">Select
+                        Gender.</label>
+                </div>
+            </div>
+            <div class="form-group" style="height: 25px;">
+                <label class="col-sm-2 form-control-label p-t-0">Select Date </label>
+                <input type="text" id="txtDate" name="SelectedDate" readonly="readonly"/>
+                <div class="col-sm-10">
+                    <span id="lblError" style="color:Red"></span>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"
+                            type="text/javascript"></script>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"
+                            type="text/javascript"></script>
+                    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css"
+                          rel="Stylesheet" type="text/css"/>
+                    <script type="text/javascript">
+                    $(function () {
+                        $("#txtDate").datepicker({
+                        changeMonth: true,
+                        changeYear: true,
+                        showOn: 'button',
+                        buttonImageOnly: true,
+                        buttonImage: '{{url_for('static', filename='date.jpg')}}',
+                        dateFormat: 'dd/mm/yy',
+                        yearRange: '1900:+0',
+                        onSelect: function (dateString, txtDate) {
+                        ValidateDOB(dateString);
+                                }
+                });
+            });
+                    function ValidateDOB(dateString) {
+                    var lblError = $("#lblError");
+                    var parts = dateString.split("/");
+                    var dtDOB = new Date(parts[1] + "/" + parts[0] + "/" + parts[2]);
+                    var dtCurrent = new Date();
+                    lblError.html("Eligibility 18 years ONLY.")
+                    if (dtCurrent.getFullYear() - dtDOB.getFullYear() < 18) {
+                        return false;
+                }
+
+                if (dtCurrent.getFullYear() - dtDOB.getFullYear() == 18) {
+
+                    //CD: 11/06/2018 and DB: 15/07/2000. Will turned 18 on 15/07/2018.
+                        if (dtCurrent.getMonth() < dtDOB.getMonth()) {
+                        return false;
+                    }
+                if (dtCurrent.getMonth() == dtDOB.getMonth()) {
+                    //CD: 11/06/2018 and DB: 15/06/2000. Will turned 18 on 15/06/2018.
+                    if (dtCurrent.getDate() < dtDOB.getDate()) {
+                        return false;
+                    }
+                }
+            }
+                lblError.html("");
+                return true;
+           }
+                    </script>
+                    <label class="error" for="date" id="lblError" style="display:none">error</label>
+                </div>
+            </div>
+            <div class="form-group" style="height: 50px;">
+                <div>
+                    <lable> Select Course</lable>
+                    <br>
+                    <select class="form-control" name="Course">
+                        {% for row in db %}
+                        <option>{{row[0]}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group" style="height: 25px;">
+                <div class="input-icon icon-left icon-lg icon-color-primary">
+                    <input type="text" class="form-control" placeholder="Address" name="Add" required>
+                    <span class="icon-addon">
+                                        <span class="ks-icon la la-envelope-o"></span>
+                                    </span>
+                </div>
+            </div>
+            <br>
+            <center>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="reset" class="btn btn-primary-outline ks-light">Reset</button>
+                </div>
+            </center>
+        </form>
+    </div>
+
+    <!--    </form>-->
+</div>
+
+<!--</div>-->
+<!--</div>-->
+
+
+<!--<form action="login.html">-->
+<!--<lable> Already Register</lable> <button type="submit" class="btn btn-primary">SignIn</button>-->
+<!--</form>-->
+<script>
+                            function validateForm() {
+                                var flag = true;
+
+                                if ($("#date").val() === '') {
+                                    $("#date_error").show();
+                                    flag = false;
+                                }
+
+                                if ($("#InputEmail").val() === '') {
+                                    $("#email_error").show();
+                                    flag = false;
+                                }
+                                if ($("#txtPassword").val() === '') {
+                                    $("#password_error").show();
+                                    flag = false;
+                                }
+                                if (!$("input[name=optradio]").is(":checked")) {
+                                    $("#gender_error").show();
+                                    flag = false;
+                                }
+                                if ($("#txtNo").val().length !== 10) {
+                                    $("#mobileno_error").show();
+                                    flag = false;
+                                }
+                                alert($("#type").val());
+                                if ($("#type").val() === '0') {
+                                    $("#type_error").show();
+                                    flag = false;
+                                }
+
+                                return flag;
+
+                            }
+
+
+
+
+
+
+
+
+
+
+
+</script>
+<script>
+        function myFunction() {
+            alert("Submit");
+        }
+
+
+
+
+
+
+
+
+</script>
+</div>
+</div>
+</div>
+</div>
+
+
+</html>

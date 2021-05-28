@@ -1,0 +1,248 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Parshwa Education</title>
+</head>
+<body>
+<div>
+{% include "header.html" %}
+</div>
+      <!--Breadcrumb Banner Area Start-->
+<form action="/course">
+                <div class="breadcrumb-banner-area">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="breadcrumb-text">
+                                    <h1 class="text-center">POPULAR COURSES</h1>
+                                    <div class="breadcrumb-bar">
+                                        <ul class="breadcrumb text-center">
+                                            <li><a href="/">Home</a></li>
+                                            <li>Courses</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-area section-padding course-page">
+                    <div class="container">
+                        <div class="row">{% for row in db %}
+                            <div class="col-md-4 col-sm-6" style="padding-block-start: 52px;">
+
+                                <div class="single-item">
+                                    <div class="single-item-image overlay-effect">
+                                        <a href="#"><img src="static/img/course/{{row[1]}}" alt=""></a>
+                                    </div>
+                                    <div class="single-item-text">
+                                        <h4><a href="#">{{row[2]}}</a></h4>
+                                        <div class="single-item-text-info">
+                                            <span>By: <span>{{row[3]}}</span></span><br>
+                                            <span>Duration: <span>{{row[4]}}</span></span><br>
+                                            <span>Price: <span>{{row[5]}}</span></span><br>
+                                            <span>Information: <span>{{row[6]}}</span></span>
+                                        </div>
+                                            <div class="single-item-content">
+<!--                                           <div class="single-item-comment-view">-->
+<!--                                               <span><i class="zmdi zmdi-eye"></i>59</span>-->
+<!--                                               <span><i class="zmdi zmdi-comments"></i>19</span>-->
+<!--                                           </div>-->
+<!--                                           <div class="single-item-rating">-->
+<!--                                               <i class="zmdi zmdi-star"></i>-->
+<!--                                               <i class="zmdi zmdi-star"></i>-->
+<!--                                               <i class="zmdi zmdi-star"></i>-->
+<!--                                               <i class="zmdi zmdi-star"></i>-->
+<!--                                               <i class="zmdi zmdi-star-half"></i>-->
+<!--                                           </div>-->
+                                        </div>
+                                    </div>
+
+                                    <div class="button-bottom">
+<!--                                        <a href="#" class="button-default">Learn Now</a>-->
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+<!--                            <div class="col-md-4 col-sm-6">-->
+<!--                                <div class="single-item">-->
+<!--                                    <div class="single-item-image overlay-effect">-->
+<!--                                        <a href="#"><img src="static/img/course/2.jpg" alt=""></a>-->
+<!--                                    </div>-->
+<!--                                    <div class="single-item-text">-->
+<!--                                        <h4><a href="#">Illustrator CC 2017</a></h4>-->
+<!--                                        <div class="single-item-text-info">-->
+<!--                                            <span>By: <span>Subas Das</span></span>-->
+<!--                                            <span>Date: <span>20.5.15</span></span>-->
+<!--                                        </div>-->
+<!--                                        <p>There are many variations of sages of Lorem Ipsum available, but the mrity have suffered alteration in some orm, by injected humo-->
+<!--        ur,There are many but the mri have suffered alteration in some </p>-->
+<!--                                        <div class="single-item-content">-->
+<!--                                           <div class="single-item-comment-view">-->
+<!--                                               <span><i class="zmdi zmdi-eye"></i>59</span>-->
+<!--                                               <span><i class="zmdi zmdi-comments"></i>19</span>-->
+<!--                                           </div>-->
+<!--                                           <div class="single-item-rating">-->
+<!--                                               <i class="zmdi zmdi-star"></i>-->
+<!--                                               <i class="zmdi zmdi-star"></i>-->
+<!--                                               <i class="zmdi zmdi-star"></i>-->
+<!--                                               <i class="zmdi zmdi-star"></i>-->
+<!--                                               <i class="zmdi zmdi-star-half"></i>-->
+<!--                                           </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="button-bottom">-->
+<!--                                        <a href="#" class="button-default">Learn Now</a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-md-4 col-sm-6">-->
+<!--                                <div class="single-item">-->
+<!--                                    <div class="single-item-image overlay-effect">-->
+<!--                                        <a href="#"><img src="static/img/course/3.jpg" alt=""></a>-->
+<!--                                    </div>-->
+<!--                                    <div class="single-item-text">-->
+<!--                                        <h4><a href="#">Indesign CC 2017</a></h4>-->
+<!--                                        <div class="single-item-text-info">-->
+<!--                                            <span>By: <span>Momin Boss</span></span>-->
+<!--                                            <span>Date: <span>20.5.15</span></span>-->
+<!--                                        </div>-->
+<!--                                        <p>There are many variations of sages of Lorem Ipsum available, but the mrity have suffered alteration in some orm, by injected humo-->
+<!--        ur,There are many but the mri have suffered alteration in some </p>-->
+<!--                                        <div class="single-item-content">-->
+<!--                                           <div class="single-item-comment-view">-->
+<!--                                               <span><i class="zmdi zmdi-eye"></i>59</span>-->
+<!--                                               <span><i class="zmdi zmdi-comments"></i>19</span>-->
+<!--                                           </div>-->
+<!--                                           <div class="single-item-rating">-->
+<!--                                               <i class="zmdi zmdi-star"></i>-->
+<!--                                               <i class="zmdi zmdi-star"></i>-->
+<!--                                               <i class="zmdi zmdi-star"></i>-->
+<!--                                               <i class="zmdi zmdi-star"></i>-->
+<!--                                               <i class="zmdi zmdi-star-half"></i>-->
+<!--                                           </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="button-bottom">-->
+<!--                                        <a href="#" class="button-default">Learn Now</a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-md-4 col-sm-6">-->
+<!--                                <div class="single-item">-->
+<!--                                    <div class="single-item-image overlay-effect">-->
+<!--                                        <a href="#"><img src="static/img/course/4.jpg" alt=""></a>-->
+<!--                                    </div>-->
+<!--                                    <div class="single-item-text">-->
+<!--                                        <h4><a href="#">Photoshop CC 2017</a></h4>-->
+<!--                                        <div class="single-item-text-info">-->
+<!--                                            <span>By: <span>M S Nawaz</span></span>-->
+<!--                                            <span>Date: <span>20.5.15</span></span>-->
+<!--                                        </div>-->
+<!--                                        <p>There are many variations of sages of Lorem Ipsum available, but the mrity have suffered alteration in some orm, by injected humo-->
+<!--        ur,There are many but the mri have suffered alteration in some </p>-->
+<!--                                        <div class="single-item-content">-->
+<!--                                           <div class="single-item-comment-view">-->
+<!--                                               <span><i class="zmdi zmdi-eye"></i>59</span>-->
+<!--                                               <span><i class="zmdi zmdi-comments"></i>19</span>-->
+<!--                                           </div>-->
+<!--                                           <div class="single-item-rating">-->
+<!--                                               <i class="zmdi zmdi-star"></i>-->
+<!--                                               <i class="zmdi zmdi-star"></i>-->
+<!--                                               <i class="zmdi zmdi-star"></i>-->
+<!--                                               <i class="zmdi zmdi-star"></i>-->
+<!--                                               <i class="zmdi zmdi-star-half"></i>-->
+<!--                                           </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="button-bottom">-->
+<!--                                        <a href="#" class="button-default">Learn Now</a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-md-4 col-sm-6">-->
+<!--                                <div class="single-item">-->
+<!--                                    <div class="single-item-image overlay-effect">-->
+<!--                                        <a href="#"><img src="static/img/course/5.jpg" alt=""></a>-->
+<!--                                    </div>-->
+<!--                                    <div class="single-item-text">-->
+<!--                                        <h4><a href="#">Illustrator CC 2017</a></h4>-->
+<!--                                        <div class="single-item-text-info">-->
+<!--                                            <span>By: <span>Subas Das</span></span>-->
+<!--                                            <span>Date: <span>20.5.15</span></span>-->
+<!--                                        </div>-->
+<!--                                        <p>There are many variations of sages of Lorem Ipsum available, but the mrity have suffered alteration in some orm, by injected humo-->
+<!--        ur,There are many but the mri have suffered alteration in some </p>-->
+<!--                                        <div class="single-item-content">-->
+<!--                                           <div class="single-item-comment-view">-->
+<!--                                               <span><i class="zmdi zmdi-eye"></i>59</span>-->
+<!--                                               <span><i class="zmdi zmdi-comments"></i>19</span>-->
+<!--                                           </div>-->
+<!--                                           <div class="single-item-rating">-->
+<!--                                               <i class="zmdi zmdi-star"></i>-->
+<!--                                               <i class="zmdi zmdi-star"></i>-->
+<!--                                               <i class="zmdi zmdi-star"></i>-->
+<!--                                               <i class="zmdi zmdi-star"></i>-->
+<!--                                               <i class="zmdi zmdi-star-half"></i>-->
+<!--                                           </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="button-bottom">-->
+<!--                                        <a href="#" class="button-default">Learn Now</a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-md-4 col-sm-6">-->
+<!--                                <div class="single-item">-->
+<!--                                    <div class="single-item-image overlay-effect">-->
+<!--                                        <a href="#"><img src="static/img/course/6.jpg" alt=""></a>-->
+<!--                                    </div>-->
+<!--                                    <div class="single-item-text">-->
+<!--                                        <h4><a href="#">Indesign CC 2017</a></h4>-->
+<!--                                        <div class="single-item-text-info">-->
+<!--                                            <span>By: <span>Momin Boss</span></span>-->
+<!--                                            <span>Date: <span>20.5.15</span></span>-->
+<!--                                        </div>-->
+<!--                                        <p>There are many variations of sages of Lorem Ipsum available, but the mrity have suffered alteration in some orm, by injected humo-->
+<!--        ur,There are many but the mri have suffered alteration in some </p>-->
+<!--                                        <div class="single-item-content">-->
+<!--                                           <div class="single-item-comment-view">-->
+<!--                                               <span><i class="zmdi zmdi-eye"></i>59</span>-->
+<!--                                               <span><i class="zmdi zmdi-comments"></i>19</span>-->
+<!--                                           </div>-->
+<!--                                           <div class="single-item-rating">-->
+<!--                                               <i class="zmdi zmdi-star"></i>-->
+<!--                                               <i class="zmdi zmdi-star"></i>-->
+<!--                                               <i class="zmdi zmdi-star"></i>-->
+<!--                                               <i class="zmdi zmdi-star"></i>-->
+<!--                                               <i class="zmdi zmdi-star-half"></i>-->
+<!--                                           </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="button-bottom">-->
+<!--                                        <a href="#" class="button-default">Learn Now</a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="row">-->
+<!--                            <div class="col-md-12">-->
+<!--                                <div class="pagination-content">-->
+<!--                                    <ul class="pagination">-->
+<!--                                        <li><a href="#"><i class="zmdi zmdi-chevron-left"></i></a></li>-->
+<!--                                        <li class="current"><a href="#"><i class="zmdi zmdi-chevron-right"></i></a></li>-->
+<!--                                    </ul>-->
+<!--                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+    <!--End of Course Area-->
+
+</form>
+<div>
+  {% include "footer.html" %}
+</div>

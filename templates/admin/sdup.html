@@ -1,0 +1,162 @@
+{%  include "admin/header.html" %}
+
+{%  include "admin/sidebar.html" %}
+
+<div class="ks-column ks-page">
+    <div class="ks-page-header">
+        <section class="ks-title">
+            <!--<hs3>Tabs</h3>-->
+        </section>
+    </div>
+    <div class="ks-page-content">
+        <div class="ks-page-content-body ks-tabs-page-container">
+            <div class="ks-tabs-container-description">
+                <h3>    </h3>
+            </div>
+            <div class="ks-page-content">
+                <div class="ks-page-content-body">
+                    <div class="ks-nav-body-wrapper">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-10 ks-panels-column-section">
+                                    <div class="card">
+                                        <div class="card-block">
+                                            <h5 class="card-title"></h5>
+                                            <form class="form-container" name="fregister" action="/student_update"
+                                                  method="post"
+                                                  onsubmit="return validateForm();" enctype="multipart/form-data">
+                                                <h3 class="ks-header">
+                                                    <center>Student Detail Update</center>
+                                                </h3>
+                                                {% for row in db %}
+                                                <div class="form-group row" style="height: 25px;">
+                                                    <input type="text" class="form-control" placeholder="First name"
+                                                           name="No"
+                                                           value="{{row.0}}" hidden>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <input type="text" class="form-control" placeholder="First name"
+                                                               name="FName"
+                                                               id="InputFName" value="{{row.3}}">
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <input type="text" class="form-control"
+                                                               placeholder="Middle name" name="MName"
+                                                               id="InputMName" value="{{row.5}}">
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <input type="text" class="form-control" placeholder="Last name"
+                                                               name="LName" id="InputLName"
+                                                               value="{{row.6}}">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="height: 25px;">
+                                                    <div class="input-icon icon-left icon-lg icon-color-primary">
+                                                        <input type="text" class="form-control" placeholder="Phone"
+                                                               name="txtNo" value="{{row.2}}">
+
+                                                        <span class="icon-addon">
+                                        <span class="la la-phone"></span>
+                                    </span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="height: 25px;">
+                                                    <div class="input-icon icon-left icon-lg icon-color-primary">
+                                                        <input type="email" class="form-control" placeholder="Email"
+                                                               name="Email" id="InputEmail"
+                                                               aria-describedby="emailHelp" data-validation="email"
+                                                               value="{{row.1}}">
+
+
+                                                        <span class="icon-addon">
+                                        <span class="la la-at"></span>
+                                    </span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="height: 25px;">
+                                                    <div class="input-icon icon-left icon-lg icon-color-primary">
+                                                        <input type="password" class="form-control"
+                                                               placeholder="Password" name="Password"
+                                                               id="txtPassword" data-validation="strength"
+                                                               data-validation-strength="2" value="{{row.4}}">
+                                                        <span class="icon-addon">
+                                                        <span class="la la-key">
+
+                                                        </span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+<!--                                                <div class="form-group row" style="height: 5px;">-->
+<!--                                                    <label class="col-sm-2 form-control-label p-t-0">Gender</label>-->
+<!--                                                    <div class="col-sm-10">-->
+<!--                                                        <label class="custom-control custom-radio">-->
+<!--                                                            <input id="radio1" type="radio" class="custom-control-input"-->
+<!--                                                                   name="optradio" value="F">-->
+<!--                                                            <span class="custom-control-indicator"></span>-->
+<!--                                                            <span class="custom-control-description">Female</span>-->
+<!--                                                        </label>-->
+<!--                                                        <label class="custom-control custom-radio">-->
+<!--                                                            <input id="radio1" type="radio" class="custom-control-input"-->
+<!--                                                                   name="optradio" value="M">-->
+<!--                                                            <span class="custom-control-indicator"></span>-->
+<!--                                                            <span class="custom-control-description">Male</span>-->
+<!--                                                        </label>-->
+<!--                                                        <label class="error" for="optradio" id="gender_error"-->
+<!--                                                               style="display: none">Select-->
+<!--                                                            Gender.</label>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+                                                <div class="form-group" style="height: 25px;">
+                                                    <div class="input-icon icon-left icon-lg icon-color-primary">
+                                                        <input type="date" class="form-control" placeholder="Birth Date"
+                                                               name="date" id="date" value="{{row.8}}">
+                                                        <span class="icon-addon">
+                                        <span class="la la-calendar-minus-o"></span>
+                                    </span>
+                                                    </div>
+                                                </div>
+                                                        <div class="form-group" style="height: 50px;">
+                <div>
+                     <lable> Select Course </lable>
+                    <br>
+                <select class="form-control" name="Course">
+
+
+                    {% for roww in db1 %}
+                    <option>{{roww[0]}}</option>
+                    {% endfor %}
+                </select>
+                </div>
+            </div>
+
+                                                <div class="form-group" style="height: 25px;">
+                                                    <div class="input-icon icon-left icon-lg icon-color-primary">
+                                                        <input type="text" class="form-control"
+                                                               placeholder="Address Line One" name="Add"
+                                                               value="{{row.10}}">
+                                                        <span class="icon-addon">
+                                        <span class="ks-icon la la-envelope-o"></span>
+                                    </span>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <center>
+                                                    <div class="form-group">
+                                                        <button type="submit" class="btn btn-primary">Update</button>
+
+                                                    </div>
+                                                </center>
+                                                {% endfor %}
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

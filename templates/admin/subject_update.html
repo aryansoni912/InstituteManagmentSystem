@@ -1,0 +1,86 @@
+{%  include "admin/header.html" %}
+
+{%  include "admin/sidebar.html" %}
+
+<div class="ks-column ks-page">
+    <div class="ks-page-header">
+        <section class="ks-title">
+            <!--<hs3>Tabs</h3>-->
+        </section>
+    </div>
+    <div class="ks-page-content">
+        <div class="ks-page-content-body ks-tabs-page-container">
+            <div class="ks-tabs-container-description">
+            </div>
+           <div class="ks-page-content">
+        <div class="ks-page-content-body">
+            <div class="ks-nav-body-wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-10 ks-panels-column-section">
+                            <div class="card">
+                                <div class="card-block">
+                                    <h5 class="card-title"></h5>
+
+                                        <form action="/sub_update" method="post">
+<!--                                            <div class="form-group row">-->
+
+                                            <h3><center> Course Update </center></h3>
+                                                 {% for row in db %}
+
+                                                <label for="default-input" class="col-sm-2 form-control-label">Image</label>
+                                                <div class="col-sm-10"><img src="{{url_for('static', filename='/img/course/')}}{{row.1}}" style="height:100px;width:100px;"></div>
+<!--                                                <label for="default-input" class="col-sm-2 form-control-label">Images</label>-->
+<!--                                                <div class="col-sm-10">-->
+<!--                                                    <input type="file" class="form-control" id="images" placeholder="Add Category" name="images"  value="{{row.1}}">-->
+<!--                                                </div>-->
+<!--                                                <label for="default-input" class="col-sm-2 form-control-label">No</label>-->
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="No" placeholder="Add Subject Name" name="No" value="{{row.0}}" hidden>
+                                                </div>
+                                              <div class="form-group row">
+                                                <label for="default-input" class="col-sm-2 form-control-label">Course Name</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="sub_name" placeholder="Add Course Name" name="sub_name" value="{{row.2}}">
+                                                </div>
+                                              </div>
+                                              <div class="form-group row">
+                                                 <label for="default-input" class="col-sm-2 form-control-label">Teacher Name</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="by" placeholder="Add Course Teacher Name" name="professorby" value="{{row.3}}">
+                                                </div>
+                                              </div>
+                                              <div class="form-group row">
+                                                 <label for="default-input" class="col-sm-2 form-control-label">Duration</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="Duration" placeholder="Add Duration" name="date" value="{{row.4}}">
+                                                </div>
+                                              </div>
+                                            <div class="form-group row">
+                                                 <label for="default-input" class="col-sm-2 form-control-label">Price</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="Price" placeholder="Add Price" name="price" value="{{row.5}}">
+                                                </div>
+                                              </div>
+                                              <div class="form-group row">
+                                                 <label for="default-input" class="col-sm-2 form-control-label">Information</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="default-input" placeholder="Add Subject Detailed Information" name="content_info" value="{{row.6}}">
+                                                </div>
+                                              </div>
+                                                {% endfor %}
+
+                                            <center><button type="submit" class="btn btn-primary">Update</button></center>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

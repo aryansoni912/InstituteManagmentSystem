@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Parshwa Education</title>
+</head>
+<body>
+<div>
+{% include "header.html" %}
+</div>
+<!--Breadcrumb Banner Area Start-->
+<form action="/about">
+                <div class="breadcrumb-banner-area">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="breadcrumb-text">
+                                    <h1 class="text-center">ABOUT US</h1>
+                                    <div class="breadcrumb-bar">
+                                        <ul class="breadcrumb text-center">
+                                            <li><a href="/
+.">Home</a></li>
+                                            <li>ABOUT US</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of Breadcrumb Banner Area-->
+                <!--About Page Area Start-->
+                <div class="about-page-area section-padding">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="section-title-wrapper">
+                                    <div class="section-title">
+                                        <h3>Who we are</h3>
+<!--                                        <p>There are many variations of passages</p>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="about-text-container">
+                                    <p><span>Parshwa Education</span> is an Online Learning platform offering Courses, Assessments, Communities and Events. It is an ideal platform for an individual who wishes to pursue education on a self-learning pace. It caters to learners across various segments right from K 12 to working professionals. It enables educators and trainers to deliver self-paced and blended learning which enables an individual to learn at any place and any time.</p>
+                                    Parshwa Education provides wide range of solutions to learners. It offers:
+                                    <div class="about-us">
+                                        <span>Blended Learning</span>
+                                        <span>Certification Courses</span>
+                                        <span>Expert guidance to learners by expert Counselors</span>
+                                        <span>Learn and upskill your knowledge from Parshwa EducationCourses.</span>
+                                    </div>
+<!--                                    <p>Snos trud exerci tation ullorper suscipit lobo maeisrn roester maeoirqs iserrtis nisl ut aliq poerwse thesr oper balinp asein hoinws mawsoib equat. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more tolerance and develop obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through makin of the word in classical literature.</p>-->
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="skill-image">
+                                    <img src="static/img/banner/6.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of About Page Area-->
+                <!--Skill And Experience Area Start-->
+                <div class="skill-and-experience-area">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="section-title-wrapper">
+                                    <div class="section-title">
+                                        <h3>Skills and Experience</h3>
+<!--                                        <p>There are many variations of passages</p>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+{% for row in db1 %}
+                            <div class="col-md-6 col-sm-6">
+                                <div class="experience-skill-wrapper">
+                                    <div class="skill-bar-item">
+                                        <span>Programming</span>
+                                        <div class="progress">
+                                            <div class="progress-bar wow fadeInLeft" data-progress="{{row[1]}}" style="width: {{row[1]}};" data-wow-duration="1.5s" data-wow-delay="1.2s">
+                                                <span class="text-top">{{row[1]}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-bar-item">
+                                        <span>Designing</span>
+                                        <div class="progress">
+                                            <div class="progress-bar wow fadeInLeft" data-progress="{{row[2]}}" style="width: {{row[2]}};" data-wow-duration="1.5s" data-wow-delay="1.2s">
+                                                <span class="text-top">{{row[2]}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-bar-item">
+                                        <span>Creative Writing</span>
+                                        <div class="progress">
+                                            <div class="progress-bar wow fadeInLeft" data-progress="{{row[3]}}" style="width: {{row[3]}};" data-wow-duration="1.5s" data-wow-delay="1.2s">
+                                                <span class="text-top">{{row[3]}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-bar-item">
+                                        <span>English Lessons</span>
+                                        <div class="progress">
+                                            <div class="progress-bar wow fadeInLeft" data-progress="{{row[4]}}" style="width: {{row[4]}};" data-wow-duration="1.5s" data-wow-delay="1.2s">
+                                                <span class="text-top">{{row[4]}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="experience-skill-wrapper">
+                                    <div class="skill-bar-item">
+                                        <span>Programming</span>
+                                        <div class="progress">
+                                            <div class="progress-bar wow fadeInLeft" data-progress="{{row[5]}}" style="width: {{row[5]}};" data-wow-duration="1.5s" data-wow-delay="1.2s">
+                                                <span class="text-top">{{row[5]}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-bar-item">
+                                        <span>Creative Writing</span>
+                                        <div class="progress">
+                                            <div class="progress-bar wow fadeInLeft" data-progress="{{row[6]}}" style="width: {{row[6]}};" data-wow-duration="1.5s" data-wow-delay="1.2s">
+                                                <span class="text-top">{{row[6]}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-bar-item">
+                                        <span>Designing</span>
+                                        <div class="progress">
+                                            <div class="progress-bar wow fadeInLeft" data-progress="{{row[7]}}" style="width: {{row[7]}};" data-wow-duration="1.5s" data-wow-delay="1.2s">
+                                                <span class="text-top">{{row[7]}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-bar-item">
+                                        <span>English Lessons</span>
+                                        <div class="progress">
+                                            <div class="progress-bar wow fadeInLeft" data-progress="{{row[8]}}" style="width: {{row[8]}};" data-wow-duration="1.5s" data-wow-delay="1.2s">
+                                                <span class="text-top">{{row[8]}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+{% endfor %}
+                </div>
+                <!--End of Skill And Experience Area-->
+                <!--Teachers Area Start-->
+                <div class="teachers-area padding-top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="section-title-wrapper">
+                                    <div class="section-title">
+                                        <h3>OUR TEACHERS</h3>
+                                        <p>There are many variations of passages of Lorem Ipsum</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                              {% for row in db %}
+                            <div class="col-lg-3 col-md-4 col-sm-6">
+                                <div class="single-teacher-item">
+                                    <div class="single-teacher-image">
+
+                                        <a href="#"><img src="static/img/teacher/{{row[1]}}" alt=""></a>
+                                    </div>
+                                    <div class="single-teacher-text">
+                                        <h3><a href="#">{{row[2]}}</a></h3>
+                                        <h4>Teacher</h4>
+                                        <p>{{row[3]}}</p>
+
+                                        <div class="social-links">
+                                            <a href="#"><i class="zmdi zmdi-facebook"></i></a>
+                                            <a href="#"><i class="zmdi zmdi-twitter"></i></a>
+                                            <a href="#"><i class="zmdi zmdi-google-old"></i></a>
+                                            <a href="#"><i class="zmdi zmdi-instagram"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+
+
+<!--                            <div class="col-lg-3 col-md-4 col-sm-6">-->
+<!--                                <div class="single-teacher-item">-->
+<!--                                    <div class="single-teacher-image">-->
+<!--                                        <a href="#"><img src="static/img/teacher/l-2.jpg" alt=""></a>-->
+<!--                                    </div>-->
+<!--                                    <div class="single-teacher-text">-->
+<!--                                        <h3><a href="#">Louis Smith111</a></h3>-->
+<!--                                        <h4>Teacher</h4>-->
+<!--                                        <p>There are many variaons of passa of Lorem Ipsuable, amrn in sofby injected humour, amr</p>-->
+<!--                                        <div class="social-links">-->
+<!--                                            <a href="#"><i class="zmdi zmdi-facebook"></i></a>-->
+<!--                                            <a href="#"><i class="zmdi zmdi-twitter"></i></a>-->
+<!--                                            <a href="#"><i class="zmdi zmdi-google-old"></i></a>-->
+<!--                                            <a href="#"><i class="zmdi zmdi-instagram"></i></a>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-lg-3 col-md-4 hidden-sm">-->
+<!--                                <div class="single-teacher-item">-->
+<!--                                    <div class="single-teacher-image">-->
+<!--                                        <a href="#"><img src="static/img/teacher/l-3.jpg" alt=""></a>-->
+<!--                                    </div>-->
+<!--                                    <div class="single-teacher-text">-->
+<!--                                        <h3><a href="#">Louis Smith333</a></h3>-->
+<!--                                        <h4>Teacher</h4>-->
+<!--                                        <p>There are many variaons of passa of Lorem Ipsuable, amrn in sofby injected humour, amr</p>-->
+<!--                                        <div class="social-links">-->
+<!--                                            <a href="#"><i class="zmdi zmdi-facebook"></i></a>-->
+<!--                                            <a href="#"><i class="zmdi zmdi-twitter"></i></a>-->
+<!--                                            <a href="#"><i class="zmdi zmdi-google-old"></i></a>-->
+<!--                                            <a href="#"><i class="zmdi zmdi-instagram"></i></a>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-lg-3 hidden-md hidden-sm">-->
+<!--                                <div class="single-teacher-item">-->
+<!--                                    <div class="single-teacher-image">-->
+<!--                                        <a href="#"><img src="static/img/teacher/l-4.jpg" alt=""></a>-->
+<!--                                    </div>-->
+<!--                                    <div class="single-teacher-text">-->
+<!--                                        <h3><a href="#">Louis Smith666</a></h3>-->
+<!--                                        <h4>Teacher</h4>-->
+<!--                                        <p>There are many variaons of passa of Lorem Ipsuable, amrn in sofby injected humour, amr</p>-->
+<!--                                        <div class="social-links">-->
+<!--                                            <a href="#"><i class="zmdi zmdi-facebook"></i></a>-->
+<!--                                            <a href="#"><i class="zmdi zmdi-twitter"></i></a>-->
+<!--                                            <a href="#"><i class="zmdi zmdi-google-old"></i></a>-->
+<!--                                            <a href="#"><i class="zmdi zmdi-instagram"></i></a>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+                        </div>
+                    </div>
+                </div>
+                <!--End of Teachers Area-->
+</form>
+<div>
+  {% include "footer.html" %}
+</div>

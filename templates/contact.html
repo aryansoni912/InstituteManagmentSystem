@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Parshwa Education</title>
+</head>
+<body>
+<div>
+{% include "header.html" %}
+</div>
+<form id="contact-form" action="/insertt" method="post">
+    <!--Breadcrumb Banner Area Start-->
+                <div class="breadcrumb-banner-area">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="breadcrumb-text">
+                                    <h1 class="text-center">CONTACT US</h1>
+                                    <div class="breadcrumb-bar">
+                                        <ul class="breadcrumb text-center">
+                                            <li><a href="/">Home</a></li>
+                                            <li>CONTACT</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of Breadcrumb Banner Area-->
+                <!--Google Map Area Start-->
+<!--                <div class="google-map-area">-->
+<!--                    &lt;!&ndash;  Map Section &ndash;&gt;-->
+<!--                    <div id="contacts" class="map-area">-->
+<!--                        <div id="googleMap" style="width:100%;height:485px;filter: grayscale(100%);-webkit-filter: grayscale(100%);"></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+                <!--End of Google Map Area-->
+                <!--Contact Form Area Start-->
+                <div class="contact-form-area section-padding">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h4 class="contact-title">contact info</h4>
+                                <div class="contact-text">
+                                    <p><span class="c-icon"><i class="zmdi zmdi-phone"></i></span><span class="c-text">+987561230</span></p>
+                                    <p><span class="c-icon"><i class="zmdi zmdi-email"></i></span><span class="c-text">info@parshwaeducation.com</span></p>
+                                    <p><span class="c-icon"><i class="zmdi zmdi-pin"></i></span><span class="c-text">Ahmedabad</span></p>
+                                </div>
+                                <h4 class="contact-title">social media</h4>
+                                <div class="link-social">
+                                    <a href="https://www.facebook.com/parshwa.infotech" target="_blank"><i class="zmdi zmdi-facebook"></i></a>
+<!--                                        <a href="#"><i class="zmdi zmdi-rss"></i></a>-->
+                                        <a href="https://parshwaedu.business.site/" target="_blank"><i class="zmdi zmdi-google-plus"></i></a>
+<!--                                        <a href="#"><i class="zmdi zmdi-pinterest"></i></a>-->
+                                        <a href="https://www.instagram.com/parshwainfotech/" target="_blank"><i class="zmdi zmdi-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <h4 class="contact-title">send your massage</h4>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <input type="text" name="name" placeholder="name" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="email" name="email" placeholder="Email" required>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <textarea name="message" cols="30" rows="10" placeholder="Message" required></textarea>
+                                            <button type="submit" onclick="myFunction()">SUBMIT</button>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+ </form>
+                <!--End of Contact Form-->
+<div>
+  {% include "footer.html" %}
+</div>
+
+   <script>
+        function myFunction() {
+            alert("Thank You For Contacts");
+        }
+   </script>

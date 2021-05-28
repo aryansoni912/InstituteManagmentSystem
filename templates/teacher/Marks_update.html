@@ -1,0 +1,181 @@
+{%  include "teacher/header.html" %}
+
+{%  include "teacher/sidebar.html" %}
+
+<div class="ks-column ks-page">
+    <div class="ks-page-header">
+        <section class="ks-title">
+            <!--<hs3>Tabs</h3>-->
+        </section>
+    </div>
+    <div class="ks-page-content">
+        <div class="ks-page-content-body ks-tabs-page-container">
+            <div class="ks-tabs-container-description">
+                <h3>Marks</h3>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane active ks-column-section" id="in-patient" role="tabpanel">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="ks-tabs-container ks-tabs-default ks-tabs-with-separator ks-tabs-header-default ks-tabs-primary tabs-bordered">
+                                <ul class="nav ks-nav-tabs">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#" data-toggle="tab" data-target="#tab4">
+                                            <span class="ks-icon la la-th text-success"></span>
+                                            List
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#" data-toggle="tab" data-target="#tab5">
+                                            <span class="ks-icon la la-file-text-o text-danger"></span>
+                                            Add
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="tab4" role="tabpanel">
+                                        <table id="ks-datatable" class="table table-striped table-bordered"
+                                               width="100%">
+<!--                                            <thead>-->
+<!--                                            <tr>-->
+<!--                                                <th>Name</th>-->
+<!--                                                <th>Day</th>-->
+<!--                                                <th>Time</th>-->
+<!--                                                <th>Subject</th>-->
+<!--                                                <th>Marks Obtai</th>-->
+<!--                                                <th>Total Marks</th>-->
+<!--                                                <th>Status</th>-->
+<!--                                                <th>Update</th>-->
+<!--                                                <th>Delete</th>-->
+<!--                                            </tr>-->
+<!--                                            </thead>-->
+<!--                                            {% for row in db3 %}-->
+<!--                                            <tr>-->
+<!--                                                <td>{{ row.1 }}</td>-->
+<!--                                                <td>{{ row.2 }}</td>-->
+<!--                                                <td>{{ row.3 }}</td>-->
+<!--                                                <td>{{ row.4 }}</td>-->
+<!--                                                <td>{{ row.5 }}</td>-->
+<!--                                                <td>{{ row.6 }}</td>-->
+<!--                                                <td>{{ row.7 }}</td>-->
+<!--                                                <td><a href="//{{row.0}}"> <i class='la la-pencil'></i></a></td>-->
+<!--                                                <td><a href="//{{row.0}}"><i class='la la-trash'> </i></a></td>-->
+<!--                                            </tr>-->
+<!--                                            {% endfor %}-->
+
+                                        </table>
+                                    </div>
+                                    {% for roww in db %}
+                                    <div class="tab-pane" id="tab5" role="tabpanel">
+                                        <form action="/mark_update" method="post">
+                                              <div class="form-group row">
+                                                <label for="default-input"
+                                                       class="col-sm-2 form-control-label">No</label>
+                                                <div class="col-sm-10">
+                                                    <select class="form-control" id="name"
+                                                            placeholder="Add Day Of Lecture" name="No" value="{{roww[0]}}" hidden>
+<!--                                                        {% for roww in db1 %}-->
+<!--                                                        <option value="{{roww[3]}}.{{roww[5]}}.{{roww[6]}}">{{roww[3]}}.{{roww[5]}}.{{roww[6]}}</option>-->
+<!--                                                        {% endfor %}-->
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="default-input"
+                                                       class="col-sm-2 form-control-label">Name</label>
+                                                <div class="col-sm-10">
+                                                    <select class="form-control" id="name"
+                                                            placeholder="Add Day Of Lecture" name="Name" value="{{roww[1]}}">
+                                                        {% for rows in db1 %}
+                                                        <option value="{{rows[3]}}.{{rows[5]}}.{{rows[6]}}">{{roww[3]}}.{{roww[5]}}.{{roww[6]}}</option>
+                                                        {% endfor %}
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="default-input"
+                                                       class="col-sm-2 form-control-label">Day</label>
+                                                <div class="col-sm-10">
+                                                    <!--                                                    <input type="text" class="form-control" id="date" placeholder="Add Day Of Lecture" name="Day" required>-->
+                                                    <select class="form-control" id="date"
+                                                            placeholder="Add Day Of Lecture" name="Day" value="{{roww[2]}}" required>
+                                                        <option>Monday</option>
+                                                        <option>Tuesday</option>
+                                                        <option>wednesday</option>
+                                                        <option>Thursday</option>
+                                                        <option>Friday</option>
+                                                        <option>Saturday</option>
+                                                        <option>Sunday</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="default-input"
+                                                       class="col-sm-2 form-control-label">Time</label>
+                                                <div class="col-sm-10">
+                                                    <select class="form-control" id="Course_Name"
+                                                            placeholder="Add Lecture Time" name="Time" value="{{roww[3]}}" required>
+                                                        <option>9-12</option>
+                                                        <option>1-3</option>
+                                                        <option>3:30-5</option>
+                                                        <option>5:30-7</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="default-input"
+                                                       class="col-sm-2 form-control-label">Subject</label>
+                                                <div class="col-sm-10">
+                                                    <select class="form-control" id="name"
+                                                            placeholder="Add Day Of Lecture" name="Subject" value="{{roww[4]}}">
+                                                        {% for row in db2 %}
+                                                        <option value="{{row[2]}}">{{row[2]}}</option>
+                                                        {% endfor %}
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="default-input"
+                                                       class="col-sm-2 form-control-label">Marks Obtain</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="date"
+                                                           placeholder="Marks Obtain" name="mark" value="{{roww[5]}}" required>
+                                                </div>
+                                            </div>
+                                              <div class="form-group row">
+                                                <label for="default-input"
+                                                       class="col-sm-2 form-control-label">Total Marks</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="date"
+                                                           placeholder="Total Marks" name="Total" value="{{roww[6]}}" required>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                    <label for=" default-input" class="col-sm-2
+                                                    form-control-label">Status</label>
+                                                    <div class="col-sm-10">
+                                                       Pass &nbsp;&nbsp;&nbsp;<input type="radio"
+                                                               placeholder="Password" name="status"
+                                                               value="Pass" value="{{roww[7]}}" checked> &nbsp;&nbsp;&nbsp;
+                                                        Fail &nbsp;&nbsp;&nbsp;<input type="radio"
+                                                               placeholder="Password" name="status"
+                                                               value="Fail">
+                                                    </div>
+                                                </div>
+                                                    <center>
+                                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                                    </center>
+                                                    <!--                                            </div>-->
+                                        </form>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
